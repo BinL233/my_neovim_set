@@ -16,7 +16,7 @@ cmp.setup({
     },
     mapping = cmp.mapping.preset.insert({
         -- Use <C-b/f> to scroll the docs
-        ['<C-b>'] = cmp.mapping.scroll_docs( -4),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         -- Use <C-k/j> to switch in items
         ['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -26,22 +26,22 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
         -- A super tab
-        -- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
-        ["<Tab>"] = cmp.mapping(function(fallback)
-            -- Hint: if the completion menu is visible select next one
-            if cmp.visible() then
-                cmp.select_next_item()
-            elseif has_words_before() then
-                cmp.complete()
-            else
-                fallback()
-            end
-        end, { "i", "s" }), -- i - insert mode; s - select mode
+        -- source: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
+        -- ["<C-Tab>"] = cmp.mapping(function(fallback)
+        --     -- Hint: if the completion menu is visible select next one
+        --     if cmp.visible() then
+        --         cmp.select_next_item()
+        --     elseif has_words_before() then
+        --         cmp.complete()
+        --     else
+        --         fallback()
+        --     end
+        -- end, { "i", "s" }), -- i - insert mode; s - select mode
         ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif luasnip.jumpable( -1) then
-                luasnip.jump( -1)
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
             else
                 fallback()
             end
