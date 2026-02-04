@@ -20,8 +20,9 @@ require("lazy").setup({
 
 require('keymaps')
 require('colorscheme')
--- require('lsp')
+require('lsp')
 
+vim.cmd.colorscheme "catppuccin"
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1

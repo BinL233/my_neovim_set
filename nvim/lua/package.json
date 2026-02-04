@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@microsoft/compose-language-service": "^0.4.0"
+  }
+}
