@@ -12,3 +12,6 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 
 # zsh auto completion
 brew install zsh-autocomplete
+
+# p10k
+brew install powerlevel10k
